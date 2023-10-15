@@ -79,3 +79,43 @@ test-suite test
                         -Wincomplete-record-updates
                         -Wincomplete-uni-patterns
                         -Wredundant-constraints
+
+                        
+executable oven
+
+    -- .hs or .lhs file containing the Main module.
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:       algebraic-graphs >= 0.5     && < 0.6,
+                        base             >= 4.7     && < 5,
+                        containers       >= 0.6     && < 0.7,
+                        extra            >= 1.5.3   && < 1.8,
+                        filepath         >= 1.4.1.0 && < 1.5,
+                        mtl              >= 2.2.1   && < 2.3,
+                        random           >= 1.1     && < 1.2,
+                        transformers     >= 0.5.2.0 && < 0.6
+        -- , hashable 
+        -- , build
+    -- Directories containing source files.
+    hs-source-dirs: ., src
+
+    -- Base language which the package is written in.
+    default-language: GHC2021
+    other-modules:
+        Build
+        Build.Rebuilder
+        Build.Scheduler
+        Build.Store
+        Build.System
+        Build.Task
+        Build.Task.Applicative
+        Build.Task.Monad
+        Build.Trace
+        Build.Utilities

@@ -1,5 +1,9 @@
 # Build Systems à la Carte
 
+```
+cabal run oven
+```
+
 [![Hackage version](https://img.shields.io/hackage/v/build.svg?label=Hackage)](https://hackage.haskell.org/package/build) [![Build status](https://img.shields.io/github/actions/workflow/status/snowleopard/build/ci.yml?branch=main)](https://github.com/snowleopard/build/actions)
 
 This project provides an executable framework for developing and comparing build systems, viewing them as
